@@ -1,0 +1,6 @@
+const actions = {
+  SEARCH_PRODUCTS_REQUEST: 'SEARCH_PRODUCTS_REQUEST',
+  SEARCH_PRODUCTS_SUCCESS: 'SEARCH_PRODUCTS_SUCCESS',
+};
+
+export default actions;
