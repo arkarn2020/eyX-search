@@ -35,10 +35,8 @@ const Products = () => {
     }
   };
 
-  const handleClear = (e) => {
-    e.preventDefault();
-    window.location.reload();
-    history.push('/products');
+  const handleClear = () => {
+    window.location.href = window.location.href;
   };
   // console.log(filterProducts.data);
 
