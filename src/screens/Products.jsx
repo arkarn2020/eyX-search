@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 import { useContext } from 'react';
+import { useHistory } from 'react-router-dom';
 
 import FetchProductContext from '../state/fetchProducts/c-context.jsx';
 import SearchProductContext from '../state/searchProducts/c-context.jsx';
@@ -12,6 +13,7 @@ const Products = () => {
     useContext(FetchProductContext);
 
   const [search, setSearch] = useState('');
+  const history = useHistory();
 
   const {
     loading: searching,
@@ -33,6 +35,11 @@ const Products = () => {
     }
   };
 
+  const handleClear = (e) => {
+    e.preventDefault();
+    window.location.reload();
+    history.push('/products');
+  };
   // console.log(filterProducts.data);
 
   if (error) return <p>something went wrong, refresh the page</p>;
@@ -79,7 +86,7 @@ const Products = () => {
                   </svg>
                 </button>
                 <button
-                  onClick={() => window.location.reload()}
+                  onClick={handleClear}
                   className="ark-btn sm:ml-6 ml-1 px-2 text-white bg-purple-400"
                 >
                   <svg
