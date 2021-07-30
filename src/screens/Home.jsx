@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
-    <div className="">
+    <div className="max-w-7xl mx-auto ">
       <div
         className="hero h-screen"
         style={{

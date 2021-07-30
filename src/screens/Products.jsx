@@ -50,7 +50,7 @@ const Products = () => {
             <div className="h-10 flex justify-around md:justify-evenly items-center">
               {/* search box form */}
               <input
-                className="h-8 sm:h-12 w-56 sm:w-96 p-2 border-2 border-purple-400 rounded-lg text-sm sm:text-lg"
+                className="h-8 sm:h-12 w-40 md:w-96 p-2 border-2 border-purple-400 rounded-lg text-sm sm:text-lg"
                 type="text"
                 placeholder=" search awesome products ..."
                 value={search}
