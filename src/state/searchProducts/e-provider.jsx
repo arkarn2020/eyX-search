@@ -19,7 +19,7 @@ const SearchProductContextProvider = ({ children }) => {
         const {
           data: { data },
         } = await axios.get(
-          `http://localhost:5000/products/search?searchQuery=${
+          `https://editorialyx.herokuapp.com/products/search?searchQuery=${
             searchQuery.search || 'none'
           }`
         );

@@ -17,7 +17,9 @@ const FetchProductContextProvider = ({ children }) => {
     fetchAllProducts: async () => {
       dispatch({ type: actions.FETCH_PRODUCTS_REQUEST });
       try {
-        const res = await axios.get('http://localhost:5000/products');
+        const res = await axios.get(
+          'https://editorialyx.herokuapp.com/products'
+        );
         dispatch({ type: actions.FETCH_PRODUCTS_SUCCESS, payload: res.data });
       } catch (error) {
         dispatch({ type: actions.FETCH_PRODUCTS_FAILURE, payload: error });
